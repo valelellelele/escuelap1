@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Escuela </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #418052;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #2e4f37;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #777;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .mensaje {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            color: #155724;
+        }
+        footer {
+            background-color: #418052;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensajeConfirmacion").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>° Escuela ° </h1>
+    </header>
+    <nav>
+        <a href="file:///C:/Users/laura/OneDrive/Documentos/pagina/escuela.html#contacto">Inicio</a>
+        <a href="file:///C:/Users/laura/OneDrive/Documentos/pagina/nosotros.html">Nosotros</a>
+        <a href="file:///C:/Users/laura/OneDrive/Documentos/pagina/programas.html">Programas</a>
+        <a href="file:///C:/Users/laura/OneDrive/Documentos/pagina/contacto.html">Contacto</a>
+    </nav>
+    <section>
+        <h2>Contacto</h2>
+        <p>¡Nos encantaría saber de ti! Por favor, utiliza el formulario siguiente para ponerte en contacto con nosotros:</p>
+        <form action="enviar.php" method="post" onsubmit="mostrarMensaje()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+        <div id="mensajeConfirmacion" class="mensaje">
+            ¡Gracias! Tu mensaje ha sido enviado correctamente.
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Escuela. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
